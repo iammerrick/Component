@@ -1,0 +1,27 @@
+{
+  "name": "Component",
+  "version": "0.0.0",
+  "description": "Compile your web components for browser consumption.",
+  "main": "component.js",
+  "bin": "bin/component",
+  "scripts": {
+    "test": "mocha test --require should"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iammerrick/component.git"
+  },
+  "keywords": [
+    "component",
+    "handlebars"
+  ],
+  "author": "Merrick Christensen",
+  "license": "MIT",
+  "dependencies": {
+    "optimist": "~0.3.5",
+    "glob-whatev": "~0.1.8",
+    "underscore": "~1.4.2",
+    "handlebars": "~1.0.7",
+    "mkdirp": "~0.3.4"
+  }
+}

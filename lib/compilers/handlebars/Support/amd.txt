@@ -1,0 +1,5 @@
+define(<%= dependencies %>, function(Handlebars) {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+  templates['<%= name %>'] = template(<%= compiled %>);
+  return templates['<%=name%>'];
+});

@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+var component = require('../component');
+
+var argv = require('optimist')
+  .describe({
+    'templates' : 'The directory of templates.',
+    'output' : 'The destination directory.',
+    'stylesheets' : 'The directory of stylesheets.',
+    'compiler' : 'The compiler you would like to use. Available compilers are: handlebars'
+  })
+  .usage('Usage: --templates [path] --output [path] --stylesheets [path]')
+  .alias({
+    'templates' : 't',
+    'output' : 'o',
+    'stylesheets' : 's',
+    'compiler' : 'c'
+  })
+  .default({
+    'compiler' : 'handlebars'
+  })
+  .demand(['templates', 'output'])
+  .argv;
+
+component.compile(argv.templates, argv.output, argv.stylesheets, argv.compiler);
