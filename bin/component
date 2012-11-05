@@ -16,9 +16,11 @@ var argv = require('optimist')
     'compiler' : 'c'
   })
   .default({
-    'compiler' : 'handlebars'
+    'compiler' : 'handlebars',
+    'templates' : 'templates',
+    'output' : 'component-out',
+    'stylesheets' : false
   })
-  .demand(['templates', 'output'])
   .argv;
 
 component.compile(argv.templates, argv.output, argv.stylesheets, argv.compiler);
